@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour {
 			//...and change the player's rotation to the new incremental rotation...
 			playerRigidbody.MoveRotation(newRotation);
 			// ...then play the jump animation.
-			playerAnimator.SetFloat ("Speed", 3f);
+			playerAnimator.SetFloat ("Speed", (5f + ScoreCounter.score * -1f/10f) + 1.1f);
 
 			//...then play footstep sounds.
 			playerFootsteps.enabled = true;
